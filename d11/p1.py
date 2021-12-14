@@ -16,21 +16,19 @@ flash = 0
 
 
 
-steps = 10000
+steps = 100
 for s in range(steps):
     for i in range(x):
         for j in range(y):
             arr2d[i][j] += 1
 
     hash_set = set()
-    local_flash = 0
     while(True):
         flag = True
         for i in range(x):
             for j in range(y):
                 if arr2d[i][j] > 9 and (i, j) not in hash_set:
                     flash+=1
-                    local_flash +=1
                     hash_set.add((i, j))
                     flag = False
                     # arr2d[i][j] = 0
@@ -65,9 +63,5 @@ for s in range(steps):
     # print('step', s+1)
     # print(arr2d)
     # print(flash)
-    # print(local_flash, x*y)
-    if local_flash == x*y:
-        print(s+1)
-        break
 
-# print(flash)
+print(flash)
