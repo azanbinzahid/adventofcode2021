@@ -1,8 +1,9 @@
 import numpy as np
 import collections
+import heapq
 
 given = []
-with open('sample.txt', 'r') as f:
+with open('in.txt', 'r') as f:
     given = map(str.strip, f.readlines())
 
 # print(given)
@@ -42,4 +43,9 @@ for i in range(len(full_map)):
 
 arr2d = np.vstack(full_full_map)
 
-# stuck at finding full path now
+import json 
+
+with open('data.json', 'w') as f:
+    json.dump(arr2d.tolist(), f)
+
+# print(arr2d)
