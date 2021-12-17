@@ -86,5 +86,6 @@ for g in given:
     g = bin(g)[2:].zfill(4)
     BITS += g
 
+
 manage_packets()
 print(VERSION_COUNT)
